@@ -58,6 +58,23 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+
+        public void Add_CheckAccumulator_CorrectAmount()
+        {
+
+            // Act
+
+            uut.Add(5, 5);
+            uut.Add(10, 10);
+
+            // Assert
+
+            Assert.That(uut.Accumulator,Is.EqualTo(20));
+        }
+
+        
+
+        [Test]
         public void Divide_DivideTwoNumbers_Is3()
         {
             //Arrange -- look at setup
