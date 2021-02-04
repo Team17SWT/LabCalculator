@@ -68,7 +68,7 @@ namespace Calculator.Unit.Test
 
             // Assert
 
-            Assert.That(uut.Accumulator,Is.EqualTo(30));
+            Assert.That(uut.Accumulator,Is.EqualTo(20));
         }
 
         
