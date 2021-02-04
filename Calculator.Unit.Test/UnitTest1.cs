@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace Calculator.Unit.Test
@@ -54,6 +55,30 @@ namespace Calculator.Unit.Test
 
             //Assert
             Assert.That(result, Is.EqualTo(25));
+        }
+
+        [Test]
+        public void Divide_DivideTwoNumbers_Is3()
+        {
+            //Arrange -- look at setup
+
+            //Act
+            var result = uut.Divide(6, 2);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(3));
+        }
+
+        [Test]
+        public void Divide_DivideByZero_ThrowsDivideByZeroException()
+        {
+            //Arrange -- Look at setup
+
+            //act
+
+            //Assert
+            Assert.That(() => uut.Divide(7,0), Throws.TypeOf<DivideByZeroException>());
+
         }
     }
 }

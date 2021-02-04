@@ -6,6 +6,8 @@ namespace Calculator
 {
     public class Calculator
     {
+        
+
         public double Add(double a, double b)
         {
             return a + b;
@@ -26,5 +28,13 @@ namespace Calculator
             return Math.Pow(x, exp);
         }
 
+        public double Divide(double a, double b)
+        {
+            if (b == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            return a / b;
+        }
     }
 }
