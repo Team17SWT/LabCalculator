@@ -55,5 +55,22 @@ namespace Calculator.Unit.Test
             //Assert
             Assert.That(result, Is.EqualTo(25));
         }
+
+        [Test]
+
+        public void Add_CheckAccumulator_CorrectAmount()
+        {
+
+            // Act
+
+            uut.Add(5, 5);
+            uut.Add(10, 10);
+
+            // Assert
+
+            Assert.That(uut.Accumulator,Is.EqualTo(30));
+        }
+
+        
     }
 }
