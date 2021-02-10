@@ -168,6 +168,31 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+        public void Divide_DivideTwoNumbers_Is3point33()
+        {
+            //Arrange -- look at setup
+
+            //Act
+            var result = uut.Divide(10, 3);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(3.33).Within(3));
+        }
+
+        [Test]
+        public void Divide_DivideTwoNumbers_Is5()
+        {
+
+            //Arrange -- look at setup
+
+            //Act
+            var result = uut.Divide(25, 5);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(5));
+        }
+
+        [Test]
         public void Divide_DivideByZero_ThrowsDivideByZeroException()
         {
             //Arrange -- Look at setup
