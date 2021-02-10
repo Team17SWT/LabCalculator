@@ -25,7 +25,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-
         public void Add_AddTwoMinusNumbers_IsMinus11()
         {
             //Arrange -- Look at SetUp
@@ -39,7 +38,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-
         public void Add_AddTwoNumbers_Is25()
         {
             //Arrange -- Look at SetUp
@@ -50,7 +48,21 @@ namespace Calculator.Unit.Test
 
             Assert.That(result, Is.EqualTo(25));
         }
-        
+
+        [TestCase(3, 5, 8)]
+        [TestCase(6, 7, 13)]
+        [TestCase(5, 5, 10)]
+        public void TestOfTestCase_AddTwoNumbers(double a, double b, double result)
+        {
+            //Arrange -- look at setup
+
+            //Act
+            var res = uut.Add(a, b);
+
+            //Assert
+            Assert.That(res, Is.EqualTo(result));
+        }
+
         [Test]
         public void Subtract_SubtractTwoNumbers_Is2()
         {
@@ -64,7 +76,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-
         public void Subtract_SubtractTwoMinusNumbers_Is1()
         {
             //Arrange -- Look at setup
@@ -101,7 +112,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-
         public void Multiply_MultiplyTwoNegativeNumbers_Is25()
         {
             //Arrange -- look at setup
@@ -114,7 +124,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-
         public void Multiply_MultiplyNegativeAndPositiveNumbers_Minus36()
         {
             //Arrange -- look at setup
@@ -139,7 +148,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-
         public void Power_PowerANegativeNumber_Is25()
         {
             //Arrange -- look at setup
@@ -152,7 +160,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-
         public void Power_PowerANumberWithNegative_Is0point2()
         {
             //Arrange -- look at setup
@@ -164,24 +171,7 @@ namespace Calculator.Unit.Test
             Assert.That(result,Is.EqualTo(0.2));
         }
 
-        [TestCase(3, 5, 8)]
-        [TestCase(6, 7, 13)]
-        [TestCase(5, 5, 10)]
-
-        public void TestOfTestCase_AddTwoNumbers(double a, double b, double result)
-        {
-
-            //Arrange -- look at setup
-
-            //Act
-            var res = uut.Add(a, b);
-
-            //Assert
-            Assert.That(res,Is.EqualTo(result));
-        }
-
         [Test]
-
         public void Accumulator_AddTwoItems_AccumulatorIsLastItem()
         {
             //Arrange -- look at SetUp
@@ -211,6 +201,7 @@ namespace Calculator.Unit.Test
 
             Assert.That(uut.Accumulator, Is.EqualTo(5));
         }
+
         [Test]
         public void Accumulator_AddAndMultiplyTwoItems_IsLastItem()
         {
