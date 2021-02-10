@@ -164,6 +164,22 @@ namespace Calculator.Unit.Test
             Assert.That(result,Is.EqualTo(0.2));
         }
 
+        [TestCase(3, 5, 8)]
+        [TestCase(6, 7, 13)]
+        [TestCase(5, 5, 10)]
+
+        public void TestOfTestCase_AddTwoNumbers(double a, double b, double result)
+        {
+
+            //Arrange -- look at setup
+
+            //Act
+            var res = uut.Add(a, b);
+
+            //Assert
+            Assert.That(res,Is.EqualTo(result));
+        }
+
         [Test]
 
         public void Accumulator_AddTwoItems_AccumulatorIsLastItem()
