@@ -166,7 +166,6 @@ namespace Calculator.Unit.Test
 
         [Test]
 
-        public void Add_CheckAccumulator_CorrectAmount()
         public void Accumulator_AddTwoItems_AccumulatorIsLastItem()
         {
             //Arrange -- look at SetUp
