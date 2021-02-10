@@ -37,6 +37,20 @@ namespace Calculator.Unit.Test
             //Assert
             Assert.That(result, Is.EqualTo(-11));
         }
+
+        [Test]
+
+        public void Add_AddTwoNumbers_Is25()
+        {
+            //Arrange -- Look at SetUp
+
+            //Act
+
+            var result = uut.Add(10, 15);
+
+            Assert.That(result, Is.EqualTo(25));
+        }
+
         [Test]
         public void Subtract_SubtractTwoNumbers_Is2()
         {
