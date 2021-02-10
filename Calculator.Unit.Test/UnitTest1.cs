@@ -1,5 +1,5 @@
-using System;
 using NUnit.Framework;
+using System;
 
 namespace Calculator.Unit.Test
 {
@@ -22,6 +22,20 @@ namespace Calculator.Unit.Test
 
             //Assert
             Assert.That(result, Is.EqualTo(7.5));
+        }
+
+        [Test]
+
+        public void Add_AddTwoMinusNumbers_IsMinus11()
+        {
+            //Arrange -- Look at SetUp
+
+            //Act
+
+            var result = uut.Add(-5, -6);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(-11));
         }
         [Test]
         public void Subtract_SubtractTwoNumbers_Is2()
