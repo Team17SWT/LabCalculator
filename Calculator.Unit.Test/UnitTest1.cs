@@ -62,6 +62,32 @@ namespace Calculator.Unit.Test
             //Assert
             Assert.That(result, Is.EqualTo(2));
         }
+
+        [Test]
+
+        public void Subtract_SubtractTwoMinusNumbers_Is1()
+        {
+            //Arrange -- Look at setup
+
+            //Act
+            var result = uut.Subtract(-15, -16);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void Subtract_SubtractTwoNumbersNegativeAndPositive_Is15()
+        {
+            //Arrange -- Look at setup
+
+            //Act
+            var result = uut.Subtract(15, -3);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(18));
+        }
+
         [Test]
         public void Multiply_MultiplyTwoNumbers_Is56()
         {
