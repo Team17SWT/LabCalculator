@@ -99,6 +99,33 @@ namespace Calculator.Unit.Test
             //Assert
             Assert.That(result, Is.EqualTo(56));
         }
+
+        [Test]
+
+        public void Multiply_MultiplyTwoNegativeNumbers_Is25()
+        {
+            //Arrange -- look at setup
+
+            //Act
+            var result = uut.Multiply(-5, -5);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(25));
+        }
+
+        [Test]
+
+        public void Multiply_MultiplyNegativeAndPositiveNumbers_Minus36()
+        {
+            //Arrange -- look at setup
+
+            //Act
+            var result = uut.Multiply(-6, 6);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(-36));
+        }
+
         [Test]
         public void Multiply_PowerANumber_Is25()
         {
