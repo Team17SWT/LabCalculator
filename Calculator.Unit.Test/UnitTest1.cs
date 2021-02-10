@@ -50,7 +50,7 @@ namespace Calculator.Unit.Test
 
             Assert.That(result, Is.EqualTo(25));
         }
-
+        
         [Test]
         public void Subtract_SubtractTwoNumbers_Is2()
         {
@@ -113,8 +113,9 @@ namespace Calculator.Unit.Test
 
         [Test]
 
-        public void Add_CheckAccumulator_CorrectAmount()
+        public void Accumulator_AddTwoItems_AccumulatorIsLastItem()
         {
+            //Arrange -- look at SetUp
 
             // Act
 
@@ -126,7 +127,35 @@ namespace Calculator.Unit.Test
             Assert.That(uut.Accumulator,Is.EqualTo(20));
         }
 
-        
+        [Test]
+        public void Accumulator_SubtractThreeNumbers_IsLastItem()
+        {
+            //Arrange -- look at SetUp
+
+            // Act
+
+            uut.Subtract(5, 5);
+            uut.Subtract(10, 10);
+            uut.Subtract(7, 2);
+
+            // Assert
+
+            Assert.That(uut.Accumulator, Is.EqualTo(5));
+        }
+        [Test]
+        public void Accumulator_AddAndMultiplyTwoItems_IsLastItem()
+        {
+            //Arrange -- look at SetUp
+
+            // Act
+
+            uut.Add(5, 5);
+            uut.Multiply(10, 10);
+           
+
+            // Assert
+            Assert.That(uut.Accumulator, Is.EqualTo(100));
+        }
 
         [Test]
         public void Divide_DivideTwoNumbers_Is3()
