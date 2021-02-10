@@ -127,7 +127,7 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-        public void Multiply_PowerANumber_Is25()
+        public void Power_PowerANumber_Is25()
         {
             //Arrange -- look at setup
 
@@ -136,6 +136,32 @@ namespace Calculator.Unit.Test
 
             //Assert
             Assert.That(result, Is.EqualTo(25));
+        }
+
+        [Test]
+
+        public void Power_PowerANegativeNumber_Is25()
+        {
+            //Arrange -- look at setup
+
+            //Act
+            var result = uut.Power(-5, 2);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(25));
+        }
+
+        [Test]
+
+        public void Power_PowerANumberWithNegative_Is0point2()
+        {
+            //Arrange -- look at setup
+
+            //Act
+            var result = uut.Power(5, -1);
+
+            //Assert
+            Assert.That(result,Is.EqualTo(0.2));
         }
 
         [Test]
