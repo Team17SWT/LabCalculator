@@ -269,3 +269,6 @@ namespace Calculator.Unit.Test
         }
     }
 }
+
+
+// Test af Pull af CoverageXML
